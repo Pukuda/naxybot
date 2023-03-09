@@ -3759,7 +3759,6 @@ OWNER : wa.me/6283826733522
             INFO
 ▬▭▬▭▬ ✦✧✦ ▬▭▬▭▬
 ➣ Nama : ${pushname}
-➣ Kecepatan : ${latensi.toFixed(4)}
 ➣ Aktif : ${runtime(process.uptime())}
 ➣ Ram : ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
 ▬▭▬▭▬ ✦✧✦ ▬▭▬▭▬
