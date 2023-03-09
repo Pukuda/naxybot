@@ -3787,7 +3787,7 @@ OWNER : wa.me/6283826733522
 ▬▭▬▭▬ ✦✧✦ ▬▭▬▭▬`
 
 const btn = [
-            { urlButton: { displayText: `Link grup`, url: `https://saweria.co/masgimenz` } },
+            { urlButton: { displayText: `Link grup`, url: `belum ada` } },
             { quickReplyButton: { displayText: `Bugmenu`, id: `${prefix}bugmenu` } },
         ]
         haikal.sendMessage(m.chat, gambar, image { text: menu, footer: `© 2022 - 2023`, templateButtons: btn }, { quoted: m })

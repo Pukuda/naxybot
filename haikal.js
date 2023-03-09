@@ -3790,7 +3790,7 @@ const btn = [
             { urlButton: { displayText: `Link grup`, url: `belum ada` } },
             { quickReplyButton: { displayText: `Bugmenu`, id: `${prefix}bugmenu` } },
         ]
-        haikal.sendMessage(m.chat, gambar, image { text: menu, footer: `© 2022 - 2023`, templateButtons: btn }, { quoted: m })
+        haikal.sendMessage(m.chat, gambar { text: menu, footer: `© 2022 - 2023`, templateButtons: btn }, { quoted: m })
 break
 case 'bugmenu': {
 if (!isRegistered) return replyReg(mess.verif)
