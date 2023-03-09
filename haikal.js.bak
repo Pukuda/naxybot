@@ -192,6 +192,10 @@ let tebaktebakan = db.data.game.tebakan = []
 let picaks = [flaming,fluming,flarun,flasmurf]
 let picak = picaks[Math.floor(Math.random() * picaks.length)]
 //=================================================//
+const wib = moment().tz('Asia/Jakarta').format('HH:mm:ss')
+const wita = moment.tz('Asia/Makassar').format('HH : mm : ss')
+        const wit = moment.tz('Asia/Jayapura').format('HH : mm : ss')   
+//=================================================//
 const time2 = moment().tz('Asia/Jakarta').format('HH:mm:ss')
 if(time2 < "23:59:00"){
 var ucapanWaktu = 'Selamat Malam'
@@ -3750,6 +3754,7 @@ break
 case 'menu': 
 if (!isRegistered) return replyReg(mess.verif)
 if (isBan) return reply(`Lah Lu Kan Di Ban`)
+gambar = fs.readFileSync(`./media/tampilanmenu.png`)
 let menu = `
 ▬▭▬▭▬ ✦✧✦ ▬▭▬▭▬
 BOT NAME : Naxybot
@@ -3759,9 +3764,11 @@ OWNER : wa.me/6283826733522
             INFO
 ▬▭▬▭▬ ✦✧✦ ▬▭▬▭▬
 ➣ Nama : ${pushname}
-➣ Kecepatan : ${latensi.toFixed(4)}
 ➣ Aktif : ${runtime(process.uptime())}
 ➣ Ram : ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
+➣ Jam Wib : ${wib}
+➣ Jam Wita : ${wita}
+➣ Jam Wit : ${wit}
 ▬▭▬▭▬ ✦✧✦ ▬▭▬▭▬
             FITUR
 ▬▭▬▭▬ ✦✧✦ ▬▭▬▭▬
@@ -3783,7 +3790,7 @@ const btn = [
             { urlButton: { displayText: `Link grup`, url: `https://saweria.co/masgimenz` } },
             { quickReplyButton: { displayText: `Bugmenu`, id: `${prefix}bugmenu` } },
         ]
-        haikal.sendMessage(m.chat, { text: menu, footer: `© 2022 - 2023`, templateButtons: btn }, { quoted: m })
+        haikal.sendMessage(m.chat, gambar, image { text: menu, footer: `© 2022 - 2023`, templateButtons: btn }, { quoted: m })
 break
 case 'bugmenu': {
 if (!isRegistered) return replyReg(mess.verif)
